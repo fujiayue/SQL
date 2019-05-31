@@ -1,5 +1,5 @@
 # SQL
-* 密码 fjy0408<br>
+* 密码 fjy****  <br>
 * `show databases；`显示数据库列表<br>
 * `use 数据库名;`<br>
 * `show tables；`显示tables 列表<br>
@@ -14,14 +14,19 @@
 ### 约束 
 * 主键约束  `var primary key`  不为空且不重复<br>
 * 联合主键  `primary key (var1,var2)`  不为空且不能同时重复<br>
-* 自增约束  `var vartype primary key auto_increment`  不为空且不重复<br>
-* 重新定义主键约束 `alter table table_name add primary key(varnamen) <br>
-* 删除主键约束  `alter table table_name drop primary key(varnamen) <br>
+* 自增约束  `var vartype primary key auto_increment`  自增约束不用设置取值<br>
+* 重新定义主键约束 `alter table table_name add primary key(varnamen)` <br>
+* 删除主键约束  `alter table table_name drop primary key(varnamen)` <br>
 
-## 数据库设计范式
+### 数据库设计范式
 *　表中所有字段都是不可分割的原子值（不可拆分） <br>
 ×　完全依赖主键 <br>
 ×　其他不存在依赖关系 <br>
 
-＃＃　事物
-＊
+###　事物
+* `select @@autocommit；` 查看事物状态<br>
+* `set autocommit=0;` 关闭mysql 的自动提交<br>
+* `commit；` 手动提交<br>
+* `rollback；` 回滚<br>
+
+
